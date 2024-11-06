@@ -2,7 +2,7 @@ class TourPackage:
     num_people = 1
     tour_type = "Standard"
 
-    def __init__(self, country="", duration=0, price=0.0):
+    def __init__(self, country ="", duration = 0, price = 0.0):
         self.__country = country 
         self.__duration = duration  
         self.__price = price  
@@ -26,10 +26,10 @@ class TourPackage:
         self.__price = price
 
     def __str__(self):
-        return f"TourPackage(country={self.__country}, duration={self.__duration} days, price={self.__price} EUR)"
+        return f"TourPackage(country={self.__country}, duration={self.__duration} days, price={self.__price})"
 
     def __repr__(self):
-        return f"TourPackage({self.__country!r}, {self.__duration!r}, {self.__price!r})"
+        return f"TourPackage(country={self.__country}, duration={self.__duration} days, price={self.__price})"
 
     def __del__(self):
         print(f"TourPackage for {self.__country} is being deleted")
@@ -43,9 +43,9 @@ def main():
     print(package2)
     print(package3)
 
-    print("Country of package1:", package1.get_country())
-    print("Duration of package2:", package2.get_duration())
-    print("Price of package3:", package3.get_price())
+    print("Country first tour:", package1.get_country())
+    print("Duration second tour:", package2.get_duration())
+    print("Price third tour:", package3.get_price())
 
 if __name__ == "__main__":
     main()
